@@ -1394,6 +1394,237 @@ ul { padding: 0; list-style: none; }
 }
 
 /* =========================================================
+   LIQUID GLASS — стеклянная поверхность
+   ========================================================= */
+
+:root {
+  --glass-border: rgba(220, 245, 255, .24);
+  --glass-border-strong: rgba(220, 245, 255, .4);
+  --glass-blur: blur(22px) saturate(155%);
+  --glass-shadow:
+    0 24px 60px -30px rgba(0, 0, 0, .85),
+    inset 0 1px 0 rgba(255, 255, 255, .26),
+    inset 0 -1px 0 rgba(255, 255, 255, .06);
+  --glass-fill:
+    linear-gradient(140deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, .035) 42%, rgba(120, 190, 255, .08) 100%);
+}
+
+/* Жидкий фон: медленно дышащие цветовые пятна */
+body { isolation: isolate; }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(36% 32% at 18% 24%, rgba(0, 145, 223, .3), transparent 70%),
+    radial-gradient(30% 28% at 84% 16%, rgba(36, 169, 236, .24), transparent 70%),
+    radial-gradient(38% 36% at 72% 80%, rgba(0, 93, 180, .3), transparent 72%),
+    radial-gradient(28% 26% at 20% 82%, rgba(141, 220, 255, .14), transparent 70%);
+  filter: blur(70px);
+  animation: liquidDrift 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes liquidDrift {
+  0% { transform: translate3d(-2%, -1%, 0) scale(1); }
+  50% { transform: translate3d(3%, 2%, 0) scale(1.06); }
+  100% { transform: translate3d(-1%, 3%, 0) scale(1.02); }
+}
+
+.hero-glow {
+  background:
+    radial-gradient(55% 50% at 78% 58%, rgba(0, 145, 223, .22), transparent 70%),
+    radial-gradient(40% 40% at 12% 14%, rgba(141, 220, 255, .12), transparent 70%),
+    linear-gradient(180deg, rgba(4, 27, 56, .72) 0%, rgba(3, 21, 44, .82) 60%, rgba(2, 15, 33, .9) 100%);
+}
+
+/* Две «капли» света за гербом */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(46px);
+  opacity: .85;
+}
+
+.hero::before {
+  width: min(46vw, 620px);
+  aspect-ratio: 1;
+  right: -6%;
+  top: 6%;
+  background: radial-gradient(circle at 38% 36%, rgba(141, 220, 255, .38), rgba(0, 145, 223, .16) 48%, transparent 72%);
+  border-radius: 46% 54% 62% 38% / 52% 42% 58% 48%;
+  animation: blobMorph 17s ease-in-out infinite alternate;
+}
+
+.hero::after {
+  width: min(34vw, 460px);
+  aspect-ratio: 1;
+  left: -8%;
+  bottom: -6%;
+  background: radial-gradient(circle at 60% 40%, rgba(0, 114, 194, .34), rgba(36, 169, 236, .1) 50%, transparent 72%);
+  border-radius: 62% 38% 44% 56% / 42% 58% 38% 62%;
+  animation: blobMorph 21s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes blobMorph {
+  0% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  40% { transform: translate(4%, -5%) rotate(18deg) scale(1.08); }
+  100% { transform: translate(-5%, 4%) rotate(-14deg) scale(.95); }
+}
+
+/* Стеклянная шапка */
+.site-header {
+  background: linear-gradient(180deg, rgba(6, 32, 64, .48), rgba(6, 32, 64, .18));
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom-color: rgba(220, 245, 255, .12);
+}
+.site-header.scrolled {
+  background: linear-gradient(180deg, rgba(5, 28, 58, .76), rgba(5, 28, 58, .5));
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: 0 12px 44px -26px rgba(0, 0, 0, .9), inset 0 1px 0 rgba(255, 255, 255, .12);
+}
+
+/* Базовые стеклянные поверхности */
+.site-header,
+.story-tabs,
+.story-panels,
+.panel-fact,
+.timeline-card,
+.trophy-card,
+.mini-stats > div,
+.game,
+.scoreboard,
+.fan-card,
+.note {
+  background: var(--glass-fill);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.marquee {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), inset 0 -1px 0 rgba(0, 0, 0, .22);
+}
+
+.section-alt {
+  background:
+    radial-gradient(50% 40% at 82% 0%, rgba(0, 145, 223, .08), transparent 70%),
+    linear-gradient(180deg, rgba(9, 38, 74, .42), rgba(3, 19, 40, .6));
+}
+
+/* Кнопки из «жидкого стекла» */
+.btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(120deg, rgba(255, 255, 255, .42), rgba(255, 255, 255, 0) 40%);
+  pointer-events: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg, rgba(141, 220, 255, .92), rgba(0, 145, 223, .9) 48%, rgba(0, 88, 168, .94));
+  border: 1px solid rgba(255, 255, 255, .42);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .55), 0 18px 42px -16px rgba(0, 145, 223, .9);
+}
+.btn-ghost {
+  background: rgba(255, 255, 255, .075);
+  border-color: var(--glass-border-strong);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .22);
+}
+
+/* Герб в стеклянной капсуле */
+.crest-ring {
+  background: radial-gradient(circle, rgba(0, 145, 223, .2), rgba(141, 220, 255, .05) 55%, transparent 72%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.crest-ring::before {
+  content: "";
+  position: absolute;
+  inset: 16%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: linear-gradient(150deg, rgba(255, 255, 255, .09), transparent 55%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2);
+}
+
+/* Табы и активные элементы */
+.story-tab.is-active {
+  background: linear-gradient(135deg, rgba(141, 220, 255, .9), rgba(0, 145, 223, .92));
+  border: 1px solid rgba(255, 255, 255, .4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), 0 12px 26px -12px rgba(0, 145, 223, .95);
+}
+
+/* Трофеи и призыв — стекло с цветным наливом */
+.trophy-main {
+  background:
+    linear-gradient(150deg, rgba(141, 220, 255, .2), rgba(0, 145, 223, .12) 60%),
+    var(--glass-fill);
+}
+.club-quote,
+.final-cta {
+  border: 1px solid var(--glass-border-strong);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+.club-quote { background: linear-gradient(115deg, rgba(0, 145, 223, .78), rgba(0, 74, 139, .74)); }
+.final-cta { background: linear-gradient(110deg, rgba(0, 77, 147, .8), rgba(0, 145, 223, .78)); }
+
+/* Зоны ворот и след — как свет сквозь стекло */
+.goal-net {
+  border-color: rgba(220, 245, 255, .55);
+  background-color: rgba(120, 190, 255, .04);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+.zone:hover,
+.zone:focus-visible {
+  background: linear-gradient(135deg, rgba(141, 220, 255, .24), rgba(255, 255, 255, .06));
+  box-shadow: inset 0 0 0 1px rgba(220, 245, 255, .3);
+}
+.shot-trail i {
+  box-shadow: 0 0 18px rgba(141, 220, 255, 1), 0 0 34px rgba(0, 145, 223, .85);
+}
+.flash { text-shadow: 0 0 30px rgba(141, 220, 255, .8), 0 8px 40px rgba(0, 0, 0, .7); }
+
+/* Мелкие стеклянные элементы */
+.header-badge,
+.mini-visual-tag,
+.scene-tag,
+.quote-author {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-color: var(--glass-border);
+}
+
+.site-footer {
+  border-top-color: var(--glass-border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .07);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(141, 220, 255, .45);
+  backdrop-filter: blur(8px);
+}
+
+/* =========================================================
    RESPONSIVE
    ========================================================= */
 
@@ -1448,6 +1679,11 @@ ul { padding: 0; list-style: none; }
 }
 
 @media (max-width: 640px) {
+  /* Облегчаем стекло на телефонах: меньше blur — выше FPS */
+  :root { --glass-blur: blur(12px) saturate(135%); }
+  body::before { filter: blur(38px); animation-duration: 32s; }
+  .hero::before, .hero::after { filter: blur(30px); }
+
   .section-head { grid-template-columns: 1fr; column-gap: 0; }
   .section-index { grid-row: auto; border-left: 0; padding-left: 0; margin-bottom: 10px; }
   .hero { padding-top: 104px; }
