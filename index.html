@@ -33,6 +33,7 @@
       <nav class="nav" id="nav" aria-label="Основная навигация">
         <a href="#story">Моя история</a>
         <a href="#club">Клуб</a>
+        <a href="#squad">Состав</a>
         <a href="#mini">Мини-футбол</a>
         <a href="#shoot">Пенальти</a>
         <a href="#fan">Болельщик</a>
@@ -249,11 +250,230 @@
       </div>
     </section>
 
+    <!-- СОСТАВ И ЛЕГЕНДЫ -->
+    <section class="section" id="squad" aria-labelledby="squad-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">03</span>
+          <p class="kicker">Состав и легенды</p>
+          <h2 id="squad-title">Те, кто <em>делает клуб</em></h2>
+          <p class="section-lead">Номера, имена и короткие истории. Сначала — текущая команда, затем те, чьи имена уже вписаны в историю «Зенита».</p>
+        </div>
+
+        <div class="squad-switch reveal" role="tablist" aria-label="Состав или легенды">
+          <button class="squad-switch-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-current" data-panel="current">Текущий состав <span>2026/27</span></button>
+          <button class="squad-switch-btn" type="button" role="tab" aria-selected="false" aria-controls="panel-legends" data-panel="legends">Легенды <span>клуба</span></button>
+        </div>
+
+        <div class="squad-view is-active" id="panel-current" role="tabpanel">
+          <div class="position-tabs" role="group" aria-label="Фильтр по амплуа">
+            <button class="position-tab is-active" type="button" data-pos="all" aria-pressed="true">Все <span>24</span></button>
+            <button class="position-tab" type="button" data-pos="gk" aria-pressed="false">Вратари <span>3</span></button>
+            <button class="position-tab" type="button" data-pos="def" aria-pressed="false">Защита <span>8</span></button>
+            <button class="position-tab" type="button" data-pos="mf" aria-pressed="false">Полузащита <span>9</span></button>
+            <button class="position-tab" type="button" data-pos="fw" aria-pressed="false">Нападение <span>4</span></button>
+          </div>
+          <p class="squad-note">Номера приведены по официальному составу клуба на сезон 2026/27.</p>
+
+          <div class="player-grid" id="playerGrid">
+            <article class="player-card" data-pos="gk">
+              <span class="player-number" aria-hidden="true">16</span>
+              <p class="player-role">Вратарь</p>
+              <h3>Денис Адамов</h3>
+              <p class="player-bio">Пришёл из «Сочи» в 2022-м; высокий и надёжный вратарь, быстро стал основным выбором команды.</p>
+            </article>
+            <article class="player-card" data-pos="gk">
+              <span class="player-number" aria-hidden="true">57</span>
+              <p class="player-role">Вратарь</p>
+              <h3>Богдан Москвичёв</h3>
+              <p class="player-bio">Молодой вратарь клубной системы: проходит школу «Зенита-2» и ждёт своего шанса в основе.</p>
+            </article>
+            <article class="player-card" data-pos="gk">
+              <span class="player-number" aria-hidden="true">71</span>
+              <p class="player-role">Вратарь</p>
+              <h3>Даниил Одоевский</h3>
+              <p class="player-bio">Воспитанник академии, побывал в арендах и вернулся в команду более опытным вратарём.</p>
+            </article>
+
+            <article class="player-card" data-pos="def">
+              <span class="player-number" aria-hidden="true">3</span>
+              <p class="player-role">Защитник · капитан</p>
+              <h3>Дуглас Сантос</h3>
+              <p class="player-bio">Бразилец с российским паспортом, в клубе с 2019-го. Капитан и эталон левого фланга.</p>
+            </article>
+            <article class="player-card" data-pos="def">
+              <span class="player-number" aria-hidden="true">15</span>
+              <p class="player-role">Защитник</p>
+              <h3>Вячеслав Караваев</h3>
+              <p class="player-bio">Опытный правый защитник, хорошо знакомый с клубной системой и умеющий подключаться к атаке.</p>
+            </article>
+            <article class="player-card" data-pos="def">
+              <span class="player-number" aria-hidden="true">25</span>
+              <p class="player-role">Защитник</p>
+              <h3>Кевин Андраде</h3>
+              <p class="player-bio">Колумбийский центрбек, воспитанник «Америка Кали»; добавил команде жёсткости в обороне.</p>
+            </article>
+            <article class="player-card" data-pos="def">
+              <span class="player-number" aria-hidden="true">28</span>
+              <p class="player-role">Защитник</p>
+              <h3>Нуралы Алип</h3>
+              <p class="player-bio">Казахстанский защитник, пришёл из «Кайрата»; высокий, читает игру и силён в воздухе.</p>
+            </article>
+            <article class="player-card" data-pos="def">
+              <span class="player-number" aria-hidden="true">33</span>
+              <p class="player-role">Защитник</p>
+              <h3>Нино</h3>
+              <p class="player-bio">Бразильский центральный защитник, пришёл в команду в 2023-м. Надёжно страхует партнёров.</p>
+            </article>
+            <article class="player-card" data-pos="def">
+              <span class="player-number" aria-hidden="true">66</span>
+              <p class="player-role">Защитник</p>
+              <h3>Роман Вега</h3>
+              <p class="player-bio">Аргентинский крайний защитник из «Аргентинос Хуниорс»; быстрый и смело идёт вперёд.</p>
+            </article>
+            <article class="player-card" data-pos="def">
+              <span class="player-number" aria-hidden="true">78</span>
+              <p class="player-role">Защитник</p>
+              <h3>Игорь Дивеев</h3>
+              <p class="player-bio">Высокий российский центрбек, перешёл в клуб в январе 2026-го; силён в единоборствах.</p>
+            </article>
+            <article class="player-card" data-pos="def">
+              <span class="player-number" aria-hidden="true">82</span>
+              <p class="player-role">Защитник</p>
+              <h3>Сергей Волков</h3>
+              <p class="player-bio">Молодой защитник, который закрывает и центр, и правый фланг, когда нужен свежий вариант.</p>
+            </article>
+
+            <article class="player-card" data-pos="mf">
+              <span class="player-number" aria-hidden="true">5</span>
+              <p class="player-role">Полузащитник</p>
+              <h3>Вильмар Барриос</h3>
+              <p class="player-bio">Колумбиец в опорной зоне с 2018-го: его часто называют «лёгкими» команды.</p>
+            </article>
+            <article class="player-card" data-pos="mf">
+              <span class="player-number" aria-hidden="true">8</span>
+              <p class="player-role">Полузащитник</p>
+              <h3>Вендел</h3>
+              <p class="player-bio">Бразильский полузащитник, пришёл из «Фламенго» в 2020-м; техника, пас и удар издали.</p>
+            </article>
+            <article class="player-card" data-pos="mf">
+              <span class="player-number" aria-hidden="true">10</span>
+              <p class="player-role">Полузащитник</p>
+              <h3>Максим Глушенков</h3>
+              <p class="player-bio">Воспитанник «Спартака», в «Зените» с 2022-го; один из главных бомбардиров последних сезонов.</p>
+            </article>
+            <article class="player-card" data-pos="mf">
+              <span class="player-number" aria-hidden="true">11</span>
+              <p class="player-role">Полузащитник</p>
+              <h3>Луиз Энрике</h3>
+              <p class="player-bio">Бразильский вингер с взрывной скоростью; умеет обыграть один на один и найти партнёра.</p>
+            </article>
+            <article class="player-card" data-pos="mf">
+              <span class="player-number" aria-hidden="true">14</span>
+              <p class="player-role">Полузащитник</p>
+              <h3>Джон Джон</h3>
+              <p class="player-bio">Бразильский атакующий полузащитник, пришёл в клуб в 2026-м; любит дриблинг и последний пас.</p>
+            </article>
+            <article class="player-card" data-pos="mf">
+              <span class="player-number" aria-hidden="true">21</span>
+              <p class="player-role">Полузащитник</p>
+              <h3>Александр Ерохин</h3>
+              <p class="player-bio">Ветеран команды, высокий полузащитник, который выигрывает верховые мячи и держит раздевалку.</p>
+            </article>
+            <article class="player-card" data-pos="mf">
+              <span class="player-number" aria-hidden="true">31</span>
+              <p class="player-role">Полузащитник</p>
+              <h3>Густаво Мантуан</h3>
+              <p class="player-bio">Бразильский универсал правого фланга, пришёл в «Зенит» в 2022-м; полезен и в защите, и в атаке.</p>
+            </article>
+            <article class="player-card" data-pos="mf">
+              <span class="player-number" aria-hidden="true">61</span>
+              <p class="player-role">Полузащитник</p>
+              <h3>Даниил Кондаков</h3>
+              <p class="player-bio">Воспитанник академии, дебютировал за основу подростком; не боится брать инициативу.</p>
+            </article>
+            <article class="player-card" data-pos="mf">
+              <span class="player-number" aria-hidden="true">93</span>
+              <p class="player-role">Полузащитник</p>
+              <h3>Артём Карпукас</h3>
+              <p class="player-bio">Молодой российский полузащитник, пришёл из «Локомотива»; работает много и без лишних слов.</p>
+            </article>
+
+            <article class="player-card" data-pos="fw">
+              <span class="player-number" aria-hidden="true">7</span>
+              <p class="player-role">Нападающий</p>
+              <h3>Александр Соболев</h3>
+              <p class="player-bio">Центральный нападающий, в клубе с 2022-го; мощно играет корпусом и ищет голевой момент.</p>
+            </article>
+            <article class="player-card" data-pos="fw">
+              <span class="player-number" aria-hidden="true">9</span>
+              <p class="player-role">Нападающий</p>
+              <h3>Фелипе Августо</h3>
+              <p class="player-bio">Бразилец 2004 года рождения, прошёл академию «Коринтианс»; свежая скорость в атаке.</p>
+            </article>
+            <article class="player-card" data-pos="fw">
+              <span class="player-number" aria-hidden="true">20</span>
+              <p class="player-role">Нападающий</p>
+              <h3>Педро</h3>
+              <p class="player-bio">Молодой бразильский форвард, быстрый и маневренный; завершает и на острие, и с фланга.</p>
+            </article>
+            <article class="player-card" data-pos="fw">
+              <span class="player-number" aria-hidden="true">51</span>
+              <p class="player-role">Нападающий</p>
+              <h3>Вадим Шилов</h3>
+              <p class="player-bio">Воспитанник клубной академии, нападающий, который уже забивал за основную команду.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="squad-view" id="panel-legends" role="tabpanel" hidden>
+          <p class="squad-note">Имена, без которых невозможно представить «Зенит».</p>
+          <div class="legend-grid">
+            <article class="legend-card">
+              <span class="legend-year">Вратарь · 1999–2012</span>
+              <h3>Вячеслав Малафеев</h3>
+              <p>Вратарь-символ, провёл за клуб более 400 матчей и стал одним из главных героев золотой эпохи.</p>
+            </article>
+            <article class="legend-card">
+              <span class="legend-year">Опорник · 2000–2009</span>
+              <h3>Анатолий Тимощук</h3>
+              <p>Капитан команды в сезоне Кубка УЕФА-2008, а позже — один из самых титулованных футболистов Украины.</p>
+            </article>
+            <article class="legend-card">
+              <span class="legend-year">Полузащитник · 2000–2012</span>
+              <h3>Константин Зырянов</h3>
+              <p>Лучший игрок России 2007 года и настоящий «дирижёр» команды Дика Адвокаата.</p>
+            </article>
+            <article class="legend-card">
+              <span class="legend-year">Плеймейкер · 2000–2009</span>
+              <h3>Андрей Аршавин</h3>
+              <p>Гений паса и дриблинга, лучший игрок страны 2006-го и автор знаменитого гола «Барселоне».</p>
+            </article>
+            <article class="legend-card">
+              <span class="legend-year">Нападающий · 2001–2006, 2010–2017</span>
+              <h3>Александр Кержаков</h3>
+              <p>Лучший бомбардир в истории «Зенита» и сборной России; форвард с уникальным чутьём на гол.</p>
+            </article>
+            <article class="legend-card">
+              <span class="legend-year">Нападающий · 2007–2009</span>
+              <h3>Павел Погребняк</h3>
+              <p>Забил в финале Кубка УЕФА 2008-го и стал одним из главных героев того незабываемого сезона.</p>
+            </article>
+            <article class="legend-card">
+              <span class="legend-year">Вингер · 2008–2013</span>
+              <h3>Данни</h3>
+              <p>Португальский вингер, пришёл в 2008-м; техника, скорость и улыбка сделали его своим для Питера.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- МИНИ-ФУТБОЛ -->
     <section class="section" id="mini" aria-labelledby="mini-title">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-index">03</span>
+          <span class="section-index">04</span>
           <p class="kicker">Мини-футбол</p>
           <h2 id="mini-title">Паркет — <em>другой футбол</em></h2>
           <p class="section-lead">Меньше поле, быстрее решения. Пять на пять, борта вместо аутов и постоянная игра в один пас.</p>
@@ -311,7 +531,7 @@
     <section class="section section-alt" id="shoot" aria-labelledby="shoot-title">
       <div class="container">
         <div class="section-head reveal">
-          <span class="section-index">04</span>
+          <span class="section-index">05</span>
           <p class="kicker">Интерактив</p>
           <h2 id="shoot-title">Пробей <em>пенальти</em></h2>
           <p class="section-lead">Выбери угол ворот и жми. Вратарь прыгает наугад — забьёшь ли ты? На телефоне тоже работает: просто нажми на зону ворот.</p>
@@ -395,7 +615,7 @@
     <section class="section" id="fan" aria-labelledby="fan-title">
       <div class="container fan-layout">
         <div class="section-head reveal">
-          <span class="section-index">05</span>
+          <span class="section-index">06</span>
           <p class="kicker">Болельщик</p>
           <h2 id="fan-title">Что значит быть <em>зенитовцем</em></h2>
           <p class="section-lead">Это не только 90 минут в выходные. Это привычка, характер и люди рядом.</p>
@@ -442,6 +662,7 @@
             <span>Разделы</span>
             <a href="#story">Моя история</a>
             <a href="#club">Клуб</a>
+            <a href="#squad">Состав</a>
             <a href="#mini">Мини-футбол</a>
           </div>
           <div>

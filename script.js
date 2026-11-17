@@ -190,6 +190,62 @@
     });
   });
 
+  /* ---------- состав и легенды ---------- */
+
+  const squadSwitchButtons = [...document.querySelectorAll(".squad-switch-btn")];
+  const squadViews = [...document.querySelectorAll(".squad-view")];
+
+  if (squadSwitchButtons.length && squadViews.length) {
+    const activateSquadView = (button) => {
+      squadSwitchButtons.forEach((btn) => {
+        const active = btn === button;
+        btn.classList.toggle("is-active", active);
+        btn.setAttribute("aria-selected", String(active));
+        btn.tabIndex = active ? 0 : -1;
+      });
+      squadViews.forEach((view) => {
+        const active = view.id === button.getAttribute("aria-controls");
+        view.hidden = !active;
+        view.classList.toggle("is-active", active);
+      });
+    };
+
+    squadSwitchButtons.forEach((button, index) => {
+      button.addEventListener("click", () => activateSquadView(button));
+      button.addEventListener("keydown", (event) => {
+        const keys = ["ArrowRight", "ArrowLeft", "Home", "End"];
+        if (!keys.includes(event.key)) return;
+        event.preventDefault();
+        let next = index;
+        if (event.key === "ArrowRight") next = (index + 1) % squadSwitchButtons.length;
+        if (event.key === "ArrowLeft") next = (index - 1 + squadSwitchButtons.length) % squadSwitchButtons.length;
+        if (event.key === "Home") next = 0;
+        if (event.key === "End") next = squadSwitchButtons.length - 1;
+        squadSwitchButtons[next].focus();
+        activateSquadView(squadSwitchButtons[next]);
+      });
+    });
+  }
+
+  const positionTabs = [...document.querySelectorAll(".position-tab")];
+  const playerCards = [...document.querySelectorAll(".player-card")];
+
+  if (positionTabs.length && playerCards.length) {
+    positionTabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const position = tab.dataset.pos;
+        positionTabs.forEach((item) => {
+          const active = item === tab;
+          item.classList.toggle("is-active", active);
+          item.setAttribute("aria-pressed", String(active));
+        });
+        playerCards.forEach((card) => {
+          card.classList.toggle("is-hidden", position !== "all" && card.dataset.pos !== position);
+        });
+      });
+    });
+  }
+
   /* ---------- интерактив: пенальти ---------- */
 
   const goal = document.getElementById("goal");
