@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ЗЕНИТ — синий цвет в крови | Фан-проект и мини-футбол</title>
+  <meta name="description" content="Фан-сайт болельщика «Зенита»: история любви к клубу, мини-футбол, трофеи и интерактивный пенальти.">
+  <meta name="theme-color" content="#031936">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="ЗЕНИТ — синий цвет в крови">
+  <meta property="og:description" content="Болею за «Зенит» и играю в мини-футбол. История, клуб, паркет и пенальти.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230068b7'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial' font-size='34' font-weight='900' fill='white' text-anchor='middle'%3E%D0%97%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Верхняя панель -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="Зенит — на главную">
+        <span class="logo-crest" aria-hidden="true">
+          <svg viewBox="0 0 220 250" role="img"><use href="#crest"></use></svg>
+        </span>
+        <span class="logo-text">ЗЕНИТ<small>фанатский проект</small></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#story">Моя история</a>
+        <a href="#club">Клуб</a>
+        <a href="#mini">Мини-футбол</a>
+        <a href="#shoot">Пенальти</a>
+        <a href="#fan">Болельщик</a>
+      </nav>
+
+      <div class="header-right">
+        <span class="header-badge">Санкт-Петербург · 1925</span>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-controls="nav" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="pitch-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+      <span class="hero-watermark" aria-hidden="true">З</span>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="pulse"></span>Фанат «Зенита» · игрок в мини-футбол</p>
+
+          <h1 class="hero-title reveal" id="hero-title">
+            СИНИЙ <span class="stroke">ЦВЕТ</span><br>В КРОВИ
+          </h1>
+
+          <p class="hero-lead reveal">
+            С детства — на трибунах, позже — уже на мини-поле. Этот сайт о клубе,
+            который стал частью жизни, и о паркете, где я сам выходил играть.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#shoot">Пробить пенальти <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#story">Моя история</a>
+          </div>
+
+          <dl class="hero-stats reveal">
+            <div>
+              <dt>Болею с</dt>
+              <dd><span data-count="2003">2003</span></dd>
+            </div>
+            <div>
+              <dt>Матчей в мини-футболе</dt>
+              <dd><span data-count="148">148</span><small>+</small></dd>
+            </div>
+            <div>
+              <dt>Забито голов</dt>
+              <dd><span data-count="63">63</span></dd>
+            </div>
+            <div>
+              <dt>Игровой номер</dt>
+              <dd>№ <span data-count="9">9</span></dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="crest-ring">
+            <span class="ring-dashed"></span>
+            <span class="ring-glow"></span>
+            <svg class="crest" viewBox="0 0 220 250"><use href="#crest"></use></svg>
+          </div>
+          <div class="floating-ball" id="floatingBall">
+            <svg viewBox="0 0 100 100"><use href="#ball"></use></svg>
+          </div>
+          <span class="hero-visual-label">всегда с нами</span>
+        </div>
+
+        <a class="scroll-hint" href="#story">
+          <span>Листай вниз</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>ЗЕНИТ</span><i>✦</i><span>СИНЕ-БЕЛО-ГОЛУБОЙ</span><i>✦</i><span>ПЕТРОВСКИЙ</span><i>✦</i><span>МИНИ-ФУТБОЛ</span><i>✦</i><span>ГОЛ!</span><i>✦</i>
+        <span>ЗЕНИТ</span><i>✦</i><span>СИНЕ-БЕЛО-ГОЛУБОЙ</span><i>✦</i><span>ПЕТРОВСКИЙ</span><i>✦</i><span>МИНИ-ФУТБОЛ</span><i>✦</i><span>ГОЛ!</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ИСТОРИЯ -->
+    <section class="section" id="story" aria-labelledby="story-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">01</span>
+          <p class="kicker">Моя история</p>
+          <h2 id="story-title">От трибуны <em>до паркета</em></h2>
+          <p class="section-lead">Сначала я болел. Потом начал играть сам. Оказалось, что мини-футбол — это тот же Зенит, только в масштабе 5 на 5.</p>
+        </div>
+
+        <div class="story-tabs reveal" role="tablist" aria-label="Две мои любви">
+          <button class="story-tab is-active" type="button" role="tab" id="tab-stand" aria-selected="true" aria-controls="panel-stand" data-tab="stand">
+            <span class="tab-icon" aria-hidden="true">★</span> На трибуне
+          </button>
+          <button class="story-tab" type="button" role="tab" id="tab-court" aria-selected="false" aria-controls="panel-court" data-tab="court" tabindex="-1">
+            <span class="tab-icon" aria-hidden="true">◉</span> На паркете
+          </button>
+        </div>
+
+        <div class="story-panels reveal">
+          <article class="story-panel is-active" id="panel-stand" role="tabpanel" aria-labelledby="tab-stand">
+            <div class="story-panel-copy">
+              <span class="panel-kicker">Большой футбол · трибуна</span>
+              <h3>Первый матч — на «Петровском»</h3>
+              <p>Отец достал билеты, и с того дня в моей жизни появился синий цвет. Помню шум трибун, фонари над полем и чувство, которое потом объяснять не нужно: «Мы — Зенит».</p>
+              <p>С тех пор — абонемент, выезды, разборы матчей и вера в то, что «Газпром Арена» — лучший стадион в мире.</p>
+            </div>
+            <div class="panel-fact">
+              <span class="fact-num">02:0</span>
+              <span class="fact-label">Манчестер Юнайтед<br>Кубок УЕФА · 2008</span>
+            </div>
+          </article>
+
+          <article class="story-panel" id="panel-court" role="tabpanel" aria-labelledby="tab-court" hidden>
+            <div class="story-panel-copy">
+              <span class="panel-kicker">Мини-футбол · паркет</span>
+              <h3>Своя игра, свой ритм</h3>
+              <p>В мини-футболе нет времени на паузу: приём, пас, движение — всё быстрее. Здесь я понял, почему тренеры всегда кричат «думай на два хода вперёд».</p>
+              <p>Играл на позиции нападающего, иногда откатывался в «стенку». Любимый момент — обвести защитника и пробить в дальний угол.</p>
+            </div>
+            <div class="panel-fact">
+              <span class="fact-num">5×5</span>
+              <span class="fact-label">Паркет · борта<br>свой маленький стадион</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-year">2003</span>
+            <div class="timeline-card">
+              <span class="timeline-tag">Начало</span>
+              <h3>Первый матч</h3>
+              <p>«Петровский», первая шарф-распашонка и навсегда закреплённый номер на футболке.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-year">2008</span>
+            <div class="timeline-card">
+              <span class="timeline-tag">Европа</span>
+              <h3>Кубок УЕФА</h3>
+              <p>Тот самый вечер в Манчестере. До сих пор помню, где сидел и как кричал, когда мяч полетел в ворота.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-year">2014</span>
+            <div class="timeline-card">
+              <span class="timeline-tag">Паркет</span>
+              <h3>Первая команда</h3>
+              <p>Пришёл в мини-футбольную секцию «просто попробовать». Остался на много лет.</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <span class="timeline-year">сейчас</span>
+            <div class="timeline-card">
+              <span class="timeline-tag">Сегодня</span>
+              <h3>Всё вместе</h3>
+              <p>Хожу на стадион, играю в любительской лиге и тренирую удары с сыном. Синий цвет никуда не делся.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КЛУБ -->
+    <section class="section section-alt" id="club" aria-labelledby="club-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">02</span>
+          <p class="kicker">Клуб</p>
+          <h2 id="club-title">Зенит — это <em>не просто матч</em></h2>
+          <p class="section-lead">Клуб с характером Питера: спокойный снаружи, с огнём внутри. И титулы, которые стали частью моей биографии.</p>
+        </div>
+
+        <div class="trophy-grid">
+          <article class="trophy-card trophy-main reveal">
+            <span class="trophy-year">2008</span>
+            <span class="trophy-icon" aria-hidden="true">✦</span>
+            <h3>Кубок УЕФА<br>и Суперкубок</h3>
+            <p>Манчестер, 2:0, и ночь, которую невозможно забыть. Первый большой европейский трофей в истории клуба.</p>
+            <span class="trophy-foot">главный вечер · 14 мая 2008</span>
+          </article>
+          <article class="trophy-card reveal">
+            <span class="trophy-num">11</span>
+            <h3>Чемпион<br>России</h3>
+            <p>Титулы 2007, 2010 и всей этой победной серии. Каждый — отдельная история.</p>
+            <span class="trophy-foot">золото РПЛ</span>
+          </article>
+          <article class="trophy-card reveal">
+            <span class="trophy-num">9</span>
+            <h3>Кубок<br>России</h3>
+            <p>Матчи на выбывание, где цена ошибки максимальная. Зенит умеет играть на характер.</p>
+            <span class="trophy-foot">серия побед</span>
+          </article>
+          <article class="trophy-card reveal">
+            <span class="trophy-num">★</span>
+            <h3>Звезда<br>на эмблеме</h3>
+            <p>Пять чемпионств — и звезда рядом с клубным гербом. Маленький знак большой истории.</p>
+            <span class="trophy-foot">с 2015 года</span>
+          </article>
+        </div>
+
+        <blockquote class="club-quote reveal">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p>«Зенит» — это когда ты заходишь на стадион, и тебе не нужно объяснять, почему ты здесь. Просто синий.</p>
+          <cite>— из моих болельщицких заметок</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- МИНИ-ФУТБОЛ -->
+    <section class="section" id="mini" aria-labelledby="mini-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">03</span>
+          <p class="kicker">Мини-футбол</p>
+          <h2 id="mini-title">Паркет — <em>другой футбол</em></h2>
+          <p class="section-lead">Меньше поле, быстрее решения. Пять на пять, борта вместо аутов и постоянная игра в один пас.</p>
+        </div>
+
+        <div class="mini-layout">
+          <div class="mini-visual reveal" aria-hidden="true">
+            <div class="mini-court">
+              <span class="court-circle"></span>
+              <span class="court-line"></span>
+              <span class="court-text">5 · 5</span>
+              <span class="court-corner tl"></span>
+              <span class="court-corner tr"></span>
+              <span class="court-corner bl"></span>
+              <span class="court-corner br"></span>
+            </div>
+            <span class="mini-visual-tag">моя вторая любовь</span>
+          </div>
+
+          <div class="mini-content reveal">
+            <div class="mini-feature">
+              <span class="feature-index">01</span>
+              <div>
+                <h3>Скорость решений</h3>
+                <p>На паркете нет времени «придержать мяч». Пас, открывание, удар — всё в секунды.</p>
+              </div>
+            </div>
+            <div class="mini-feature">
+              <span class="feature-index">02</span>
+              <div>
+                <h3>Техника и контроль</h3>
+                <p>Маленькая площадка прощает ошибки меньше, чем большой газон. Приём и первое касание решают всё.</p>
+              </div>
+            </div>
+            <div class="mini-feature">
+              <span class="feature-index">03</span>
+              <div>
+                <h3>Команда как семья</h3>
+                <p>Пять человек на поле — каждый на виду. Здесь быстро узнаёшь, кто тебя прикроет, а кто подставит.</p>
+              </div>
+            </div>
+
+            <div class="mini-stats">
+              <div><strong data-count="148">148</strong><span>матчей</span></div>
+              <div><strong data-count="63">63</strong><span>гола</span></div>
+              <div><strong data-count="27">27</strong><span>пасовых</span></div>
+              <div><strong>№ 9</strong><span>номер</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ИНТЕРАКТИВ -->
+    <section class="section section-alt" id="shoot" aria-labelledby="shoot-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-index">04</span>
+          <p class="kicker">Интерактив</p>
+          <h2 id="shoot-title">Пробей <em>пенальти</em></h2>
+          <p class="section-lead">Выбери угол ворот и жми. Вратарь прыгает наугад — забьёшь ли ты? На телефоне тоже работает: просто нажми на зону ворот.</p>
+        </div>
+
+        <div class="game reveal" id="game">
+          <div class="game-info">
+            <div class="scoreboard">
+              <div class="score-block">
+                <span>ЗЕНИТ · ГОЛЫ</span>
+                <strong id="scoreGoals">0</strong>
+              </div>
+              <div class="score-divider" aria-hidden="true"></div>
+              <div class="score-block">
+                <span>ВРАТАРЬ · СЕЙВЫ</span>
+                <strong id="scoreSaves">0</strong>
+              </div>
+            </div>
+
+            <p class="game-status" id="gameStatus" aria-live="polite">Выбери угол ворот, чтобы пробить.</p>
+
+            <div class="aim-legend" aria-hidden="true">
+              <span>⬅ левый угол</span><span>центр</span><span>правый угол ➡</span>
+            </div>
+
+            <div class="game-buttons">
+              <button class="btn btn-primary" type="button" id="randomShot">Случайный удар</button>
+              <button class="btn btn-ghost" type="button" id="resetGame">Сбросить счёт</button>
+            </div>
+
+            <p class="game-note">Подсказка: вратарь угадывает направление примерно в трети случаев. Дальний угол — надёжнее.</p>
+          </div>
+
+          <div class="goal-stage">
+            <div class="goal" id="goal">
+              <div class="goal-net" aria-hidden="true"></div>
+              <div class="goal-frame" aria-hidden="true"></div>
+              <div class="goal-crossbar" aria-hidden="true"></div>
+              <div class="keeper" id="keeper" aria-hidden="true">
+                <svg viewBox="0 0 80 120">
+                  <ellipse cx="40" cy="112" rx="30" ry="5" fill="rgba(0,0,0,.35)"/>
+                  <path d="M28 40 L16 78 L10 108" stroke="#eaf6ff" stroke-width="9" stroke-linecap="round" fill="none"/>
+                  <path d="M52 40 L64 78 L70 108" stroke="#eaf6ff" stroke-width="9" stroke-linecap="round" fill="none"/>
+                  <path d="M24 42 L14 20" stroke="#eaf6ff" stroke-width="8" stroke-linecap="round" fill="none"/>
+                  <path d="M56 42 L66 20" stroke="#eaf6ff" stroke-width="8" stroke-linecap="round" fill="none"/>
+                  <circle cx="12" cy="17" r="7" fill="#ffd45e"/>
+                  <circle cx="68" cy="17" r="7" fill="#ffd45e"/>
+                  <rect x="25" y="28" width="30" height="52" rx="12" fill="#0068b7"/>
+                  <circle cx="40" cy="18" r="11" fill="#f1c9a5"/>
+                  <path d="M29 16 q11 -12 22 0" fill="#17324f"/>
+                </svg>
+              </div>
+              <div class="ball-shadow" id="ballShadow" aria-hidden="true"></div>
+              <span class="penalty-spot" aria-hidden="true"></span>
+              <div class="shot-trail" id="shotTrail" aria-hidden="true"><i></i></div>
+              <div class="ball" id="ball" aria-hidden="true">
+                <svg viewBox="0 0 100 100"><use href="#ball"></use></svg>
+              </div>
+              <div class="goal-zones" id="goalZones">
+                <button type="button" class="zone" data-zone="0" aria-label="Удар в левый верхний угол"></button>
+                <button type="button" class="zone" data-zone="1" aria-label="Удар в верхний центр"></button>
+                <button type="button" class="zone" data-zone="2" aria-label="Удар в правый верхний угол"></button>
+                <button type="button" class="zone" data-zone="3" aria-label="Удар в левый нижний угол"></button>
+                <button type="button" class="zone" data-zone="4" aria-label="Удар в нижний центр"></button>
+                <button type="button" class="zone" data-zone="5" aria-label="Удар в правый нижний угол"></button>
+              </div>
+              <div class="flash" id="flash" aria-hidden="true"></div>
+            </div>
+            <div class="goal-label" aria-hidden="true">ВЫБЕРИ УГОЛ И УДАРЬ</div>
+          </div>
+        </div>
+
+        <div class="note reveal">
+          <span class="note-mark" aria-hidden="true">9</span>
+          <p><strong>Номер на футболке — 9.</strong> В мини-футболе я играл именно под этим номером: нападающий, который любит дальний угол и быстрый пас в «стенку».</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- БОЛЕЛЬЩИК -->
+    <section class="section" id="fan" aria-labelledby="fan-title">
+      <div class="container fan-layout">
+        <div class="section-head reveal">
+          <span class="section-index">05</span>
+          <p class="kicker">Болельщик</p>
+          <h2 id="fan-title">Что значит быть <em>зенитовцем</em></h2>
+          <p class="section-lead">Это не только 90 минут в выходные. Это привычка, характер и люди рядом.</p>
+        </div>
+
+        <div class="fan-cards">
+          <article class="fan-card reveal">
+            <span aria-hidden="true">◉</span>
+            <h3>Верность</h3>
+            <p>Даже когда матч не задался. Особенно когда матч не задался.</p>
+          </article>
+          <article class="fan-card reveal">
+            <span aria-hidden="true">✦</span>
+            <h3>Свой круг</h3>
+            <p>Друзья с трибуны и партнёры по мини-футболу — одна команда.</p>
+          </article>
+          <article class="fan-card reveal">
+            <span aria-hidden="true">➜</span>
+            <h3>Движение</h3>
+            <p>Стадион, зал, паркет. Футбол не заканчивается на финальном свистке.</p>
+          </article>
+        </div>
+
+        <div class="final-cta reveal">
+          <div>
+            <span class="cta-kicker">Спасибо за визит</span>
+            <h3>Сила в нас. <em>И в синем.</em></h3>
+          </div>
+          <a class="btn btn-primary" href="#top">Наверх ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">ЗЕНИТ <i>★</i></span>
+          <p>Фан-проект болельщика, который играл в мини-футбол. Сделано с любовью к клубу, городу и игре.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Навигация в подвале">
+          <div>
+            <span>Разделы</span>
+            <a href="#story">Моя история</a>
+            <a href="#club">Клуб</a>
+            <a href="#mini">Мини-футбол</a>
+          </div>
+          <div>
+            <span>Ещё</span>
+            <a href="#shoot">Пенальти</a>
+            <a href="#fan">Болельщик</a>
+            <a href="#top">Наверх ↑</a>
+          </div>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> · Фан-проект «Зенит»</span>
+        <span>Не является официальным сайтом ФК «Зенит»</span>
+        <span class="footer-made">Сделано с синим цветом в крови</span>
+      </div>
+    </div>
+  </footer>
+
+  <!--Общие SVG-символы-->
+  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="crest" viewBox="0 0 220 250">
+      <defs>
+        <linearGradient id="crestGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#12a3e8"/>
+          <stop offset="0.55" stop-color="#0072c2"/>
+          <stop offset="1" stop-color="#003a76"/>
+        </linearGradient>
+      </defs>
+      <path d="M110 8 L205 40 L205 124 C205 182 165 222 110 242 C55 222 15 182 15 124 L15 40 Z" fill="url(#crestGrad)" stroke="#eaf6ff" stroke-width="5"/>
+      <path d="M110 24 L191 51 L191 124 C191 173 158 208 110 227 C62 208 29 173 29 124 L29 51 Z" fill="none" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+      <path d="M48 88 L172 88 L148 118 L48 118 Z" fill="rgba(255,255,255,.1)"/>
+      <path d="M48 88 L172 88 L172 94 L48 94 Z" fill="rgba(255,255,255,.18)"/>
+      <text x="110" y="115" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="31" font-weight="900" fill="#ffffff" letter-spacing="1">ЗЕНИТ</text>
+      <path d="M110 137 l6.5 14 15.5 2 -11.5 11 3 15.5 -13.5 -8 -13.5 8 3 -15.5 -11.5 -11 15.5 -2 Z" fill="#ffffff"/>
+      <text x="110" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="rgba(255,255,255,.9)" letter-spacing="2">САНКТ-ПЕТЕРБУРГ</text>
+    </symbol>
+    <symbol id="ball" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="49" fill="#ffffff" stroke="#d9e6f2" stroke-width="1.5"/>
+      <polygon points="50,32 66,44 60,62 40,62 34,44" fill="#0d2a4d"/>
+      <polygon points="50,2 62,10 58,25 42,25 38,10" fill="#0d2a4d"/>
+      <polygon points="6,38 20,31 30,43 22,56 8,50" fill="#0d2a4d"/>
+      <polygon points="94,38 80,31 70,43 78,56 92,50" fill="#0d2a4d"/>
+      <polygon points="20,88 25,72 39,68 40,84 30,94" fill="#0d2a4d"/>
+      <polygon points="80,88 75,72 61,68 60,84 70,94" fill="#0d2a4d"/>
+      <path d="M50 2 L50 32 M62 10 L66 44 M38 10 L34 44 M20 31 L34 44 M80 31 L66 44 M8 50 L40 62 M92 50 L60 62 M22 56 L40 62 M78 56 L60 62 M25 72 L40 62 M75 72 L60 62" stroke="#a9c1d8" stroke-width="1.4" fill="none"/>
+    </symbol>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
